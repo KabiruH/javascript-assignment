@@ -1,11 +1,10 @@
-
 // Question 4
-
+// Generates a random number between 1 and 100 
 function generateRandomNumber() {
     return Math.floor(Math.random() * 100) + 1;
 }
 
-// Prompts the user to enter a number to guess the correct one */
+// Prompts the user to enter a number to guess the correct one 
 function getPlayerGuess(attempt) {
     let input;
 
@@ -16,8 +15,7 @@ function getPlayerGuess(attempt) {
     return parseInt(input);
 }
 
-/* Function 3 */
-/* Checks to see if the player's guess is correct */
+// Checks to see if the player's guess is correct 
 function checkGuess(guess, target) {
     if (guess < target) {
         return "Too low! Try again.";
@@ -28,9 +26,17 @@ function checkGuess(guess, target) {
     }
 }
 
-/* Function 4 */
-/* Implements the main game logic */
+// Implements the main game logic 
 function game1() {
+
+     alert(
+      `🎯 NUMBER GUESSING GAME\n` +
+      `====================\n` +
+      `The AI has picked a secret number between 1 and 100.\n\n` +
+      `⚠️ You only have 10 attempts — don't waste them!\n` +
+      `Good luck! 🍀`
+    );
+    
     const targetNumber = generateRandomNumber();
     let attempts = 1;
     let result;
@@ -54,7 +60,7 @@ function game1() {
 
 
 /* Function 5 */
-/* Provides feedback to the player based on their guess */
+// Provides feedback to the player based on their guess 
 function provideFeedback(guess, target) {
     if (guess < target) {
         return "Too low!";
@@ -66,7 +72,7 @@ function provideFeedback(guess, target) {
 }
 
 /* Function 6 */
-/* Implements a scoring system (based on the speed of the player's correct guesses) */
+// Implements a scoring system (based on the speed of the player's correct guesses) 
 function scoringSystem(attempts) {
     let points;
 
@@ -198,7 +204,6 @@ const game = () => {
 
   console.log('===========================================');
 };
-
 
 function menu() {
   let choice = null;
